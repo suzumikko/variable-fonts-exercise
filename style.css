@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
+}
+
+:root {
   --color-gray-100: hsl(270deg 25% 96%);
   --color-gray-300: hsl(270deg 17% 84%);
   --color-gray-500: hsl(270deg 17% 72%);
@@ -43,10 +46,23 @@ footer {
 .logo {
   font-size: 2rem;
   margin-bottom: 16px;
+  font-weight: 900;
+}
+
+.sublogo {
+  font-weight: 500;
+  font-style: italic;
+  color: var(--color-gray-500)
+}
+
+.person-name {
+  font-weight: 700;
+  color: var(--color-gray-300)
 }
 
 .legal {
   margin-top: auto;
+  color: var(--color-gray-700);
 }
 
 .links {
@@ -58,10 +74,13 @@ footer {
   margin-bottom: 24px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  color: var(--color-gray-700);
+  font-weight: 700;
 }
 
 .links li {
   margin: 16px 0;
+  font-weight: 500;
 }
 
 .links li:last-of-type {
@@ -70,6 +89,11 @@ footer {
 
 .links a {
   text-decoration: none;
+  color: var(--color-gray-100);
+}
+
+.links a:hover {
+  color: var(--color-gray-300);
 }
 
 main {
@@ -78,4 +102,19 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .legal {
+    margin-top: 24px;
+  }
+
+  .links {
+    margin-top: 64px;
+  }
 }
